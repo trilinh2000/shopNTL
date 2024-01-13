@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTL</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/home.css"
+    />
+</head>
+<body>
+    <div id="header">
+        <ul id="header1">
+            <li>
+                <a href="http://localhost:3000/NTL.vn">NTL.vn<ion-icon name="home-outline"></ion-icon></a>
+            </li>
+            <li id="search-line">
+                <input type="text" name="search" id="search" >
+                <ion-icon name="search-outline" id="search-outline"></ion-icon>
+            </li>
+            <li>
+                <p>Hotline 0362474285</p>
+            </li>
+            <li>
+                <a href="http://localhost:3000/NTL/wishlist"><ion-icon name="heart-outline" id="heart-outline"></ion-icon> Wishlist</ion-icon></a>
+            </li>
+            <li>
+                <%if(account.username=='Login'){%>
+                <a href="http://localhost:3000/NTL/login"><ion-icon name="person-outline" id="person-outline"></ion-icon><%=account.username%></ion-icon></a>
+                <%}%>
+                <%if(account.username!='Login'){%>
+                    <a href=""><%=account.username%></a>
+                    <a href="http://localhost:3000/NTL/logout">Logout</a>
+                <%}%>
+            </li>
+            <li>
+                <a href="http://localhost:3000/NTL/store"><ion-icon name="cart-outline" id="cart-outline"></ion-icon> Store</ion-icon></a>
+            </li>
+        </ul>
+        <ul id="header2">
+            <li>
+                <a href="#">A</a>
+            </li>
+            <li>
+                <a href="#">B</a>
+            </li>
+            <li>
+                <a href="#">C</a>
+            </li>
+            <li>
+                <a href="#">D</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main">
+        <ul>
+            <li>
+                <img src="" alt="">
+                <ul>
+                    <li>
+                        <a href="">Edit</a>
+                    </li>
+                    <li>
+                        <a href="">Delete</a>
+                    </li>
+                </ul>
+                
+            </li>
+        </ul>
+    </div>
+    <div id="footer">footer</div>
+    <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"> </script> 
+    <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"> </script>
+</body>
+</html>

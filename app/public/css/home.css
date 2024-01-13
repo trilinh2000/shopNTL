@@ -1,0 +1,95 @@
+#header {
+    background-color: #6bd2e2;
+    height: 100px;
+    width: 100%;
+}
+#header ul,#header li{
+    margin: 0px;
+    padding: 0px;
+}
+#header #header1{
+    height: 50px;
+    width: 100%;
+    clear: both;
+}
+#header #header2{
+    height: 50px;
+    width: 100%;
+    clear: both;
+}
+#header #header1 li {
+    list-style: none;
+    float: left;
+    width: 250px;
+    height: 30px;
+    position: relative;
+    top:5px;
+    left: 50px;
+    text-align: center  ;
+}
+#header #header1 #search-line{
+    background-color: white;
+    border: solid 1px white;
+    border-radius: 10px;
+}
+#header #header1 li a{
+   text-decoration: none;
+   color: white;
+   
+}
+#header #header1 li a #heart-outline{
+    height: 15px;
+    width: 250px;
+ }
+ #header #header1 li a #person-outline{
+    height: 15px;
+    width: 250px;
+ }
+ #header #header1 li a #cart-outline{
+    height: 15px;
+    width: 250px;
+ }
+#header #header1 li #search{
+    border: none;
+    width: 200px;
+    height: 30px;
+    border: none;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+ }
+ #header #header1 li #search-outline{
+    color: blue;
+    width: 50px;
+    height: 30px;
+    float: left;
+ }
+#header #header1 li p{
+    color: white;
+    margin: 5px;
+    padding: 0px;
+ }
+#header #header2 li {
+    list-style: none;
+    float: left;
+    width: 200px;
+    height: 30px;
+    border:1px solid wheat;
+    text-align: center;
+}
+#header #header2 li a{
+    text-decoration: none;
+    color: white;
+ }
+#main{
+    background-color: white;
+    height:90%;
+    width: 100%;
+    float: left;
+}
+#footer{
+    background-color: #1e1b18;
+    height:100px;
+    width: 100%;
+    clear: both;
+}

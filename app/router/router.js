@@ -9,6 +9,7 @@ module.exports= app => {
     .post('/NTL/login',login.sendLogin)
     .get('/NTL/create',middleWare.login,login.create)
     .post('/NTL/create',login.sendCreate)
+    .get('/NTL/verify',login.verify)
     .get('/NTL/logout',login.logout)
     app.use(router);
 };

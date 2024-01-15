@@ -28,9 +28,10 @@
     text-align: center  ;
 }
 #header #header1 #search-line{
-    background-color: white;
+    
     border: solid 1px white;
     border-radius: 10px;
+    background-color: white;
 }
 #header #header1 li a{
    text-decoration: none;
@@ -52,16 +53,15 @@
 #header #header1 li #search{
     border: none;
     width: 200px;
-    height: 30px;
-    border: none;
+    height: 25px;
+    border: solid 1px white;
+    border-radius: 5px;
     float: left;
-    margin: 0px;
-    padding: 0px;
  }
  #header #header1 li #search-outline{
     color: blue;
-    width: 50px;
-    height: 30px;
+    width: 40px;
+    height: 25px;
     float: left;
  }
 #header #header1 li p{

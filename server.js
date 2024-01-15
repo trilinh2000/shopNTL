@@ -1,6 +1,7 @@
 const express=require('express');
 const app=express();
 const session=require('express-session')
+require('dotenv/config')
 const mongodb=require('./app/config/configMongodb');
 mongodb();
 app.use(express.json())
@@ -10,12 +11,12 @@ app.set('view engine','ejs')
 app.set('views','app/views')
 
 app.use(session({
-    secret:'mysql',
+    secret:process.env.SESSION_SECRET,
     resave:true,
     saveUninitialized:true,
 }))
 require('./app/router/router')(app);
-app.listen(3000,(err)=>{
+app.listen(process.env.PORT_SERVER,(err)=>{
     if(err) throw err;
     console.log('Connection Server');
 })

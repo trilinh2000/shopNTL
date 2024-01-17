@@ -29,13 +29,15 @@
                 <a href="http://localhost:3000/NTL/wishlist"><ion-icon name="heart-outline" id="heart-outline"></ion-icon> Wishlist</ion-icon></a>
             </li>
             <li>
-                <%if(account.username=='Login'){%>
-                <a href="http://localhost:3000/NTL/login"><ion-icon name="person-outline" id="person-outline"></ion-icon><%=account.username%></ion-icon></a>
-                <%}%>
-                <%if(account.username!='Login'){%>
-                    <a href=""><%=account.username%></a>
-                    <a href="http://localhost:3000/NTL/logout">Logout</a>
-                <%}%>
+                <div id="img">
+                    <% items.forEach(function(image) { %>
+                        <img id="img"
+                            src="data:image/<%=image.productId.img.contentType%>;base64,
+                                    <%=image.productId.img.data.toString('base64')%>"
+                          />
+                        <a href="http://localhost:3000/NTL/logout">Logout</a>
+                      <% }) %>
+                </div>
             </li>
             <li>
                 <a href="http://localhost:3000/NTL/store"><ion-icon name="cart-outline" id="cart-outline"></ion-icon> Store</ion-icon></a>
@@ -56,22 +58,22 @@
             </li>
         </ul>
     </div>
-    <div id="main">
+    <div id="sidebar">
         <ul>
             <li>
-                <a href=""></a>
+                <a href="">List</a>
                 <ul>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="">List1</a></li>
+                    <li><a href="">List1</a></li>
+                    <li><a href="">List1</a></li>
                 </ul>
             </li>
             <li>
-                <a href=""></a>
+                <a href="">Book</a>
                 <ul>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="">Book1</a></li>
+                    <li><a href="">Book2</a></li>
+                    <li><a href="">Book3</a></li>
                 </ul>
             </li>
             <li>
@@ -84,7 +86,31 @@
             </li>
         </ul>
     </div>
-    <div id="footer">footer</div>
+    <div id="main">
+        <div id="main-input">
+            <form action="/NTL.vn" method="post" enctype="multipart/form-data"> 
+                <input type="text" name="name" id="name" placeholder="name">
+                <input type="text" name="title" id="title" placeholder="title">
+                <input type="file" name="image" id="image">
+                <input type="submit" value="Post">
+            </form>
+        </div>
+        <div id="main-layout">
+            <% items.forEach(function(image) { %>
+                <ul>
+                    <li>
+                    <img id="img"
+                        src="data:image/<%=image.img.contentType%>;base64,
+                                <%=image.img.data.toString('base64')%>"
+                    />
+                    <p><%= image.name %></p>
+                    <p><%= image.title %></p>
+                    </li>
+                </ul>
+              <% }) %>
+        </div>
+    </div>
+
     <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"> </script> 
     <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"> </script>
 </body>

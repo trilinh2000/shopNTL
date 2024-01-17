@@ -61,6 +61,7 @@
     border: none;
     border-radius: 10px;
  }
+ 
  #header #header1 li #search-outline{
     position: absolute;
     top:0px;
@@ -76,26 +77,71 @@
     padding: 0px;
     
  }
+ #header #header1 li img{
+    width: 50px;
+    height: 30px;
+ }
 #header #header2 li {
     list-style: none;
+    position: relative;
+    left: 240px;
     float: left;
     width: 200px;
     height: 30px;
-    border:1px solid wheat;
     text-align: center;
 }
 #header #header2 li a{
     text-decoration: none;
     color: white;
  }
-#main{
-    background-color: white;
-    height:90%;
-    width: 100%;
+#sidebar{
+    background-color: #6bd2e2;
+    height:800px;
+    width: 240px;
+    float: left;
+    font-family: 'Times New Roman', Times, serif;
+}
+#sidebar,#sidebar ul,#sidebar li{
+    margin: 0px;
+    padding: 0px;
+}
+#sidebar ul{
+    position: relative;
+    top: 50px;
+}
+#sidebar li{
+    list-style: none;
+    position: relative;
+    height: 50px;
+    width: 200px;
+    line-height: 25px;
+    padding: 0 20px;
+    background-color: #6bd2e2;
+}
+#sidebar li a{
+    text-decoration: none;
+    color: white;
+    
+}
+#sidebar li:hover{
+    background-color: aqua;
+}
+#sidebar ul ul{
+    position: absolute;
+    top: 10px;
+    left: 240px;
+    visibility: hidden;
+}
+#sidebar ul li:hover ul{
+    visibility: visible;
+}
+#main {
+    background-color: black;
+    height:800px;
+    width: max-content;
     float: left;
 }
 #footer{
-    background-color: #1e1b18;
     height:100px;
     width: 100%;
     clear: both;

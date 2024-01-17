@@ -2,6 +2,8 @@ const account=require('../model/account')
 require('dotenv/config');
 const bcrypt=require('bcrypt');
 const mailer=require('../utils/mailer');
+const fs=require('fs')
+const path=require('path')
 module.exports.login=async(req,res)=>{
     await res.render('account/login');
 }
@@ -29,8 +31,8 @@ module.exports.create=async(req,res)=>{
     await res.render('account/create');
 }
 module.exports.sendCreate=async(req,res)=>{
-    const {username,email,password,img}=req.body;
-    if(!{username,email,password,img}){
+    const {username,email,password}=req.body;
+    if(!{username,email,password}){
         await res.render('account/create');
     }
     else{
@@ -39,7 +41,10 @@ module.exports.sendCreate=async(req,res)=>{
                 username:username,
                 email:email,
                 password:hashed,
-                img:img,
+                img:{
+                    data: fs.readFileSync(path.join('app/uploads/'+req.file.filename)),
+                    contentType: 'image/jpg'
+                }
             }
             const create=await account.create(obj);
             console.log(create);
@@ -81,7 +86,7 @@ module.exports.logout=(req,res)=>{
         if(err){
             res.redirect('/500');
         }
-        res.redirect('/NTL.vn');
+        res.redirect('/NTL/login');
         console.log("Logout")
     })
 }

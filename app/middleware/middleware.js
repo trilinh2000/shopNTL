@@ -13,8 +13,6 @@ module.exports.logout=(req,res,next)=>{
         next();
     }
     else{
-        const obj={username:'Login'}
-        res.locals.account=obj;
-        res.render('home');
+        res.redirect('/NTL/login');
     }
 }

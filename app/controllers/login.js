@@ -2,6 +2,9 @@ const account=require('../model/account')
 require('dotenv/config');
 const bcrypt=require('bcrypt');
 const mailer=require('../utils/mailer');
+const express=require('express');
+express.json();
+express.urlencoded({extended:true});
 const fs=require('fs')
 const path=require('path')
 module.exports.login=async(req,res)=>{

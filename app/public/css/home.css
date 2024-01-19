@@ -1,5 +1,5 @@
 #header {
-    background-color: #6bd2e2;
+    background-color: white;
     height: 100px;
     width: 100%;
 }
@@ -8,99 +8,129 @@
     padding: 0px;
 }
 #header #header1{
-    height: 50px;
-    width: 100%;
-    clear: both;
+    height: 100px;
+    width: 30%;
+    float: left;
 }
 #header #header2{
+    height: 100px;
+    width: 60%;
+    float: left;
+}
+#header #header3{
+
+    height: 100px;
+    width: 10%;
+    float: left;
+}
+#header #header3 #header3-login{
+    position: relative;
+    left: 50px;
+}
+#header #header3 #header3-login #img{
     height: 50px;
-    width: 100%;
+    width: 50px;
+    border-radius: 35px;
+    clear: both;
+}
+#header #header3 #header3-login a{
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    height: 50px;
+    width: 50px;
     clear: both;
 }
 #header #header1 li {
     list-style: none;
+    color: #077bff;
     float: left;
-    width: 250px;
-    height: 30px;
     position: relative;
-    top:5px;
-    left: 50px;
-    text-align: center  ;
-}
-#header #header1 #search-line{
-    
-    border: solid 1px white;
-    border-radius: 10px;
-    background-color: white;
-}
-#header #header1 li a{
-   text-decoration: none;
-   color: white;
-   
-}
-#header #header1 li a #heart-outline{
-    height: 15px;
-    width: 250px;
- }
- #header #header1 li a #person-outline{
-    height: 15px;
-    width: 250px;
- }
- #header #header1 li a #cart-outline{
-    height: 15px;
-    width: 250px;
- }
-#header #header1 li #search{
-    position: absolute;
     margin: 0px;
     padding: 0px;
-    top: 0px;
-    left: 0px;
-    height: 30px;
-    width: 200px;
-    border: none;
-    border-radius: 10px;
- }
- 
- #header #header1 li #search-outline{
-    position: absolute;
-    top:0px;
-    right: 0px;
-    width: 40px;
-    height: 30px;
-    border-radius: 15px;
-    line-height: 5px;
- }
-#header #header1 li p{
-    color: white;
-    margin: 5px;
-    padding: 0px;
+    text-align: center ;
+}
+#header #header1 li a{
+    text-decoration: none;
+    color: #077bff;
+}
+#header #header1 #home{
+    position: relative;
+    left: 10px;
+    height: 100px;
+    width: 40%;
+    float: left;
     
- }
- #header #header1 li img{
+}
+#header #header1 #home a{
+    position: relative;
+    top: 15px;
+    height: 50px;
+    width: 100%;
+    
+}
+ 
+#header #header1 #home p{
+    height: 35px;
+    width: 100%;
+    
+}
+#header #header1 #search-line{
+    position: relative;
+    height: 50px;
+    width: 50%;
+    margin: 20px;
+    float: left;
+} 
+#header #header1 #search-line #search{
+    position: relative;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 20px;
+    width: 90%;
+    color: #077bff;
+} 
+
+#header #header1 #search-line #searchId {
+    border: 1px solid white;
+    border-radius: 15px;
+    position: absolute;
+    height: 25px;
     width: 50px;
-    height: 30px;
- }
+    line-height: 20px;
+    top: 0px;
+    right: 0px;
+    color: #077bff;
+}
 #header #header2 li {
     list-style: none;
     position: relative;
-    left: 240px;
+    top: 20px;
+    left: 100px;
     float: left;
-    width: 200px;
-    height: 30px;
+    height: 50px;
+    width: 100px;
     text-align: center;
+    
 }
 #header #header2 li a{
     text-decoration: none;
-    color: white;
+    color:#077bff;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+
  }
-#sidebar{
-    background-color: #6bd2e2;
+
+ #sidebar{
+    background-color: white;
     height:800px;
     width: 20%;
     float: left;
     font-family: 'Times New Roman', Times, serif;
+    line-height: 50px;
 }
+
 #sidebar,#sidebar ul,#sidebar li{
     margin: 0px;
     padding: 0px;
@@ -115,35 +145,30 @@
     top: 50px;
     height: 50px;
     width: 100%;
-    line-height: 25px;
     padding: 0;
-    background-color: #6bd2e2;
+    background-color: white;
+    color: #077bff;
 }
 #sidebar li a{
     text-decoration: none;
-    color: white;
+    color:#077bff;
+    
     
 }
-#sidebar li:hover{
-    background-color: aqua;
-}
-#sidebar ul ul{
-    position: absolute;
-    top: 10px;
-    left: 100%;
+#sidebar li a #sidebar-img{
+    border-radius: 25px;
     height: 50px;
-    width: 100px;
-    visibility: hidden;
-}
-#sidebar ul li:hover ul{
-    visibility: visible;
+    width: 50px;
+    
 }
 #main {
     background-color: black;
     height:800px;
-    width: max-content;
+    width: 80%;
     float: left;
 }
+
+/*
 #main #main-input{
     position: relative;
     top: 0px;
@@ -151,6 +176,7 @@
     height: 200px;
     width: 100%;
 }
+
 #main #main-input input{
     height: 50px;
     width: 100%;
@@ -164,8 +190,9 @@
     height: 200px;
     width: 200px;
 }
+*/
 #footer{
     height:100px;
     width: 100%;
     clear: both;
-}
+} 

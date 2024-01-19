@@ -13,77 +13,76 @@
 <body>
     <div id="header">
         <ul id="header1">
-            <li>
-                <a href="http://localhost:3000/NTL.vn">NTL.vn<ion-icon name="home-outline"></ion-icon></a>
+            <li id="home">
+                <a href="http://localhost:3000/NTL.vn">NTL.vn<ion-icon name="home-outline" id="home-outline"></ion-icon></a>
+                <p>Hotline 0362474285</p>
             </li>
             <li id="search-line">
                 <form action="" method="">
-                    <input type="text" name="search" id="search" >
-                    <input type="submit" id="search-outline" name="Search">
-                </form>   
+                    <input type="text" name="search" id="search" placeholder="Search into NTL">
+                    <input type="submit" value="Search" id="searchId">
+                </form>  
             </li>
-            <li>
-                <p>Hotline 0362474285</p>
-            </li>
-            <li>
-                <a href="http://localhost:3000/NTL/wishlist"><ion-icon name="heart-outline" id="heart-outline"></ion-icon> Wishlist</ion-icon></a>
-            </li>
-            <li>
-                <div id="img">
-                    
+        </ul>
+        <div id="header2">
+            <ul>
+                <li>
+                    <a href="http://localhost:3000/NTL.vn"><ion-icon name="home" id="home"></ion-icon></a>
+                </li>
+                <li>
+                    <a href="http://localhost:3000/NTL.vn"><ion-icon name="tv"></ion-icon></a>
+                </li>
+                <li>
+                    <a href="http://localhost:3000/NTL.vn"><ion-icon name="storefront-outline"></ion-icon></a>
+                </li>
+                <li>
+                    <a href=""><ion-icon name="notifications"></ion-icon></a>
+                </li>
+                <li>
+                    <a href="http://localhost:3000/NTL/store"><ion-icon name="cart-outline" id="cart-outline"></ion-icon></ion-icon></a>
+                </li>
                 
+            </ul>
+        </div>
+        <div id="header3">
+                <div id="header3-login">
                               <img id="img"
                               src="data:image/<%=items.img.contentType%>;base64,
                                       <%=items.img.data.toString('base64')%>"
                             />
+                            <a href="http://localhost:3000/NTL/logout"><ion-icon name="enter"></ion-icon></a>
                         
-                      
                 </div>
-            </li>
-            <li>
-                <a href="http://localhost:3000/NTL/store"><ion-icon name="cart-outline" id="cart-outline"></ion-icon> Store</ion-icon></a>
-            </li>
-        </ul>
-        <ul id="header2">
-            <li>
-                <a href="#">A</a>
-            </li>
-            <li>
-                <a href="#">B</a>
-            </li>
-            <li>
-                <a href="#">C</a>
-            </li>
-            <li>
-                <a href="#">D</a>
-            </li>
-        </ul>
-    </div>
+        </div>
     <div id="sidebar">
         <ul>
             <li>
-                <a href="">List</a>
-                <ul>
-                    <li><a href="">List1</a></li>
-                    <li><a href="">List1</a></li>
-                    <li><a href="">List1</a></li>
-                </ul>
+                <div>
+                    <a href="http://localhost:3000/NTL.vn"><img id="sidebar-img"
+                        src="data:image/<%=items.img.contentType%>;base64,
+                                <%=items.img.data.toString('base64')%>"/><% if(account){%><%=account.username%><%}%></a>
+                </div>
+                <div>
+
+                </div>
+                
+                        
             </li>
             <li>
                 <a href="">Book</a>
-                <ul>
+                <!-- <ul>
                     <li><a href="">Book1</a></li>
                     <li><a href="">Book2</a></li>
                     <li><a href="">Book3</a></li>
-                </ul>
+                </ul> -->
             </li>
             <li>
-                <a href=""></a>
-                <ul>
+                <a href="">Ban Be</a>
+                <!-- <ul>
                     <li><a href=""></a></li>
                     <li><a href=""></a></li>
                     <li><a href=""></a></li>
-                </ul>
+                </ul> -->
             </li>
         </ul>
     </div>
